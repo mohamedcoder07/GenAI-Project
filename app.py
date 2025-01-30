@@ -7,8 +7,10 @@ import PyPDF2
 # model = joblib.load('iris_model.pkl')
 
 # Interface Streamlit
+st.image("pdf-icon.png", width=100)  # Ajuste la taille de l'image si nécessaire
 st.title("Chat with your PDFs using IA")
 st.write("Utilisez cette application pour chatter avec ton PDF utilisant LLM/RAG.")
+
 
 # Section d'upload du fichier PDF
 uploaded_file = st.file_uploader("📄 Choisissez un fichier PDF", type="pdf")
@@ -29,6 +31,29 @@ if uploaded_file is not None:
 
     except Exception as e:
         st.error(f"❌ Erreur lors de la lecture du PDF : {e}")
+
+
+
+
+
+
+
+
+
+
+# Interface Streamlit avec image à côté du titre
+# st.markdown(
+#     """
+#     <div class="container">
+#         <img src="pdf-icon.png" class="logo" alt="Logo">
+#         <h1>Chat with your PDFs using IA</h1>
+#     </div>
+#     <p>Utilisez cette application pour chatter avec ton PDF utilisant LLM/RAG.</p>
+#     """,
+#     unsafe_allow_html=True
+# )
+
+
 
 # Entrée des caractéristiques de la fleur
 # st.subheader("🔢 Entrer les caractéristiques de la fleur")
